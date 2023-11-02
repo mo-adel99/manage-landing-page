@@ -1,5 +1,71 @@
 @use "../utilities/all" as *;
 
 .slider-section {
-  min-height: 70vh;
+  min-height: 75vh;
+
+  h2 {
+    font-weight: 700;
+    color: $Dark-Blue;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+
+    @include view-below(sm) {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+  }
+
+  .carousel {
+    margin-bottom: 3rem;
+  }
+
+  .carousel-inner {
+    padding-block: 5rem 3rem;
+    display: flex;
+  }
+
+  .carousel-item {
+    text-align: center;
+    background-color: #ececec8e;
+    width: 40%;
+    padding: 4rem 1.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include view-below(sm) {
+      width: 100%;
+    }
+
+    img {
+      width: 100px;
+      position: absolute;
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+
+    }
+
+    p {
+      color: $Dark-Grayish-Blue;
+    }
+  }
+
+  .carousel-indicators {
+    @include view-below(sm) {
+      
+      button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $Bright-Red !important;
+      }
+    }
+  }
 }

@@ -98,7 +98,8 @@ header {
     background-size: 100%;
     background-position: 80px -30px;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 7rem;
+    margin-bottom: 3.4rem;
   }
 }
 header h1 {
@@ -140,6 +141,7 @@ header p {
 @media (max-width: 37.5rem) {
   .features .container {
     padding-inline: 1.6rem 0;
+    margin-bottom: 1.4rem;
   }
 }
 .features p {
@@ -243,7 +245,63 @@ header p {
 }
 
 .slider-section {
-  min-height: 70vh;
+  min-height: 75vh;
+}
+.slider-section h2 {
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 37.5rem) {
+  .slider-section h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+.slider-section .carousel {
+  margin-bottom: 3rem;
+}
+.slider-section .carousel-inner {
+  padding-block: 5rem 3rem;
+  display: flex;
+}
+.slider-section .carousel-item {
+  text-align: center;
+  background-color: rgba(236, 236, 236, 0.5568627451);
+  width: 40%;
+  padding: 4rem 1.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 37.5rem) {
+  .slider-section .carousel-item {
+    width: 100%;
+  }
+}
+.slider-section .carousel-item img {
+  width: 100px;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-section .carousel-item h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.slider-section .carousel-item p {
+  color: hsl(227, 12%, 61%);
+}
+@media (max-width: 37.5rem) {
+  .slider-section .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(12, 88%, 59%) !important;
+  }
 }
 
 .simplify-section {
