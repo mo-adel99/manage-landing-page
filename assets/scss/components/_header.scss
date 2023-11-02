@@ -1,0 +1,44 @@
+@use "../utilities/all" as *;
+
+header {
+  min-height: 98vh;
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-size: 53%;
+  background-position: 118% -140px;
+  background-repeat: no-repeat;
+
+  @include view-below(sm) {
+    min-height: 100vh;
+    background-size: 100%;
+    background-position: 80px -30px;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  h1 {
+    color: $Dark-Blue !important;
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    @include view-below(sm) {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: .7rem;
+    }
+  }
+
+  p {
+    color: $Dark-Grayish-Blue;
+    width: 68%;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+
+    @include view-below(sm) {
+      width: 100%;
+      padding-inline: 1rem;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+  }
+}

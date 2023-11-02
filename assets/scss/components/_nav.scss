@@ -1,0 +1,52 @@
+@use "../utilities/all" as *;
+
+nav {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.custom-nav {
+  #navbarNav {
+    @include view-below(sm) {
+      background-color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 2.5rem;
+      padding: 2rem .5rem;
+      font-weight: 700;
+      box-shadow: 5px 5px 12px rgba($color: #000000, $alpha: .2);
+    }
+
+    .navbar-nav {
+      gap: 1.2rem;
+      a {
+        color: $Dark-Blue;
+        font-size: .95rem;
+  
+        @include view-below(sm) {
+            font-size: 1.2rem;
+        }
+        &:hover {
+          color: $Dark-Grayish-Blue;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      background-image:url("../images/icon-hamburger.svg");
+    }
+  }
+
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../all" as *;
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "be vietnam pro", sans-serif;
+}
+
+.container {
+  padding-inline: 5.5rem;
+
+  @include view-below(sm) {
+    padding-inline: 1.6rem; 
+  }
+}

@@ -1,0 +1,125 @@
+@use "../utilities/all" as *;
+
+footer {
+  background-color: $Very-Dark-Blue;
+  padding-block: 3rem;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: $Dark-Grayish-Blue;
+    margin: 0;
+    font-size: .8rem;
+    text-align: right;
+  }
+  .footer {
+    &--logo {
+      @include view-below(sm) {
+        width: 100%;
+        margin-bottom: 2.5rem;
+      }
+
+      img {
+        @include view-below(sm) {
+          width: 45%;
+          align-self: center;
+        }
+      }
+      &-social{
+        justify-content: space-between;
+
+        @include view-below(sm) {
+          margin-bottom: 2.5rem;  
+        }
+
+        img {
+          @include view-below(sm) {
+            width: 28px;
+          }
+        }
+      }
+    }
+    
+    &--menu {
+      ul {
+        columns: 2;
+        gap: 15rem;
+
+        @include view-below(sm) {
+          gap: 5rem;
+          margin-bottom: 2.8rem;
+        }
+
+        li {
+          margin-bottom: 1.1rem;
+          font-size: .85rem;
+
+          a {
+            color: #d1d1d1;
+
+            &:hover {
+              color: $Bright-Red;
+            }
+          }
+        }
+      }
+    }
+    
+    &--form {
+      @include view-below(sm) {
+        width: 100%;
+      }
+
+      form {
+        @include view-below(sm) {
+          margin-bottom: 2rem;
+          width: 100%;
+          gap: 8px;
+
+          &>div {
+            width: 100%;
+          }
+        }
+      }
+
+      input {
+        padding: 11px 25px 11px 18px;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        margin-right: 8px;
+        font-size: .8rem;
+        text-align: left;
+        color: $Bright-Red;
+        margin-bottom: 8px;
+
+        @include view-below(sm) {
+          width: 100%;
+        }
+
+        &:focus {
+          outline: 1px solid $Bright-Red;
+
+          &+ span {
+            display: block;
+          }
+        }
+      }
+
+      span {
+        color: hsla(12, 88%, 59%, 0.74);
+        font-size: .6rem;
+        padding-left: 18px;
+        display: none;
+      }
+    }
+  }
+}

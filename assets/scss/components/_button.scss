@@ -1,0 +1,30 @@
+@use "../utilities/all" as *;
+
+.custom-btn {
+  background-color: $Bright-Red;
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: .85rem;
+  box-shadow: 0 2px 7px $Bright-Red;
+  font-weight: 700;
+
+  &:hover {
+    background-color: hsla(12, 88%, 59%, 0.74);
+  }
+
+  &--light {
+    background-color: #fff;
+    color: $Bright-Red;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: .85rem;
+    font-weight: 700;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+
+
+    &:hover {
+      color: hsla(12, 88%, 59%, 0.74);
+    }
+  }
+}
